@@ -3,7 +3,7 @@
 #define truth(a) ((a)?("true"):("false"))
 
 void display(char * s);
-bool ispalindrome(char * s,bool flag=0);
+bool ispalindrome(char * s,bool flagIgnoreCase=0);
 bool ignoreCase(char a,char b);
 int size(char * s);
 
@@ -25,7 +25,7 @@ bool ignoreCase(char a,char b){
     return (a==b) || (a-' '==b) || (b-' '==a);
 }
 
-bool ispalindrome(char * s,bool flag=0){
+bool ispalindrome(char * s,bool  flagIgnoreCase=0){
     int len = size(s);
     int loop = (len%2) ? len+1 : len;
     loop /= 2;
